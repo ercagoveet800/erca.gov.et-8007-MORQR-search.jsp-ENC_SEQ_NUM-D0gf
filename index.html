@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valid Receipt</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px 15px;
+            color: #000000;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 18px;
+            margin: 12px 0;
+            line-height: 1.3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ministry of Revenue: Valid Recipt</h2>
+
+    <p>የደረሰኝ መለያ ቁጥር: <span id="receiptNo">785</span></p>
+    <p>የግብር ከፋይ መለያ ቁጥር0016868572</p>
+    <p>የግብር ከፋይ መለያ ቁጥር: </p>
+    <p>የደረሰኝ ዓይነት: CASH SALES<br>INVOICE/VAT</p>
+    <p>የግብር ከፋዩ ስም: ሃይሉ አንጃ ፋልታሞ</p>
+    የግብሩ ከፋዩ ታክስ ማዕከል: SERS WOLAYTA SODO CITY<br>
+    <p>የቫት/VAT/ መለያ ቁጥር: 11314388745</p>
+    <p>የቫት/VAT/ ቁጥር: 2285991165</p>
+    <p>የማተሚያ ቤት ስም: BERHANENA SELAM<br>PRINTING ENTERPRISE</p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        if (id) {
+            document.getElementById('receiptNo').innerText = id;
+        }
+    </script>
+</body>
+</html>
